@@ -17,3 +17,18 @@ class Person {
 }
 let p = new Person('Krish', 'mandal', 'anyabc@email.com', 31);
 p.greetMe();
+
+// Implicit waay to declare class property
+class Car{
+  constructor(
+    public make: string,
+    public model: string,
+    private price: number
+  ){}
+  showDetails() {
+    console.log(`This is ${this.make}-${this.model}, costing ${this.price}`);
+  }
+}
+
+let myCar = new Car('bmw', '750li',650000);
+myCar.showDetails();
